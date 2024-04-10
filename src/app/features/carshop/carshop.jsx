@@ -21,10 +21,23 @@ function CarShop() {
             {isLoading && <div> Loading...</div>}
             {
                 cars.map((car, index) => {
-                    return <Box sx={{ display: "flex", flexDirection: "column", width: "30px", height: "40px" }}
+                    return <Box
+                        height={200}
+                        width={200}
+                        my={4}
+                        display="flex"
+                        alignItems="center"
+                        gap={4}
+                        p={2}
+                        sx={{ border: '2px solid grey' }}
                         key={index * Math.random()}>
-                        <div>
-                            <div>{car.brand}::::::{car.model}</div>
+                            
+                        <div className={styles.car}>
+                            <div>Brand:: {car.brand}</div>
+                            <div>Model:: {car.model}</div>
+                            <div>Year:: {car.year}</div>
+                            <div>Price:: {car.price}$</div>
+
                         </div>
 
                     </Box>
