@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getCars } from './carshopAPI'
+import { deleteCar, getCars } from './carshopAPI'
 
 const initialState = {
     isLoading: false,
